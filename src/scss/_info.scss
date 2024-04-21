@@ -1,0 +1,134 @@
+.tabs {
+    width: 100%;
+    &__header {
+        display: flex;
+        padding: 4px;
+        align-items: center;
+        width: 100%;
+        max-width: 630px;
+        border-radius: 24px;
+        background-color: #fff;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+        &-item {
+            margin: 0 25px;
+            cursor: pointer;
+            &.active {
+                padding: 8px 32px;
+                max-width: 115px;
+                width: 100%;
+                border-radius: 24px;
+                display: flex;
+                justify-content: center;
+                background-color: #833afb;
+            }
+        }
+    }
+    &__content {
+    }
+}
+.info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.info__card {
+    border: 12px solid #000;
+    border-radius: 60px;
+    background-color: #f4f4f6;
+}
+.tabs {
+}
+.info__card-tabs {
+    padding: 40px 32px;
+}
+
+.tabs__content {
+}
+.tabs__content-item {
+}
+.info__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    gap: 22px;
+}
+.info__content__cards {
+}
+.info__content__cards-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 42px;
+    border-radius: 21px;
+    background-color: #fff;
+    max-width: 390px;
+}
+.info__content__cards-item:first-child {
+    background-color: #1a2134;
+    margin-bottom: 22px;
+    .info__content__cards-item-text-price {
+        color: #fff;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 51px;
+    }
+    .info__content__cards-item-text-descr {
+        color: #fff;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+    }
+}
+.info__content__cards-item-img {
+    padding: 21px;
+    border-radius: 133px;
+    background-color: #ece1fe;
+}
+.info__content__cards-item-text {
+}
+.info__content__cards-item-text-price {
+    color: #000;
+    font-size: 42px;
+    font-style: normal;
+    font-family: "Sofia Sans",sans-serif;
+    font-weight: 700;
+    line-height: 51px;
+}
+.info__content__cards-item-text-descr {
+    color: #000;
+  font-size: 22px;
+  font-style: normal;
+  margin-top: 0;
+  text-align: left;
+  font-family: "Sofia Sans",sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+}
+.info__content__graphic {
+}
+.info__content__graphic-inner {
+}
+.info__content-graphic-inner-title {
+}
+.info__content-graphic-inner-date {
+}
+.info__content-graphic-inner-date-1 {
+}
+.info__content-graphic-inner-date-2 {
+}
+.info__content-graphic-inner-date-3 {
+}
+.info__content__graphic-img {
+}
+.info__content__balance {
+}
+.info__content__balance-subtitle {
+}
+.info__content__balance-title {
+}
+.info__content__balance-btn {
+}
+.btn {
+}

@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.logo {
+    a {
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+    }
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu__item {
+}
+.menu__item-link {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+}
+.burger {
+}
+.navabar-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 32px;
+    font-size: 14px;
+    font-weight: 700;
+}
