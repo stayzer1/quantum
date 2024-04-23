@@ -45,64 +45,6 @@ function tabs(
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
 tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");
 
-// Step Form
-// function stepForm() {
-//   const steps = document.querySelectorAll(".form__step");
-//   const prevBtn = document.querySelector(".prev__step");
-//   const nextBtn = document.querySelector(".next__step");
-//   const form = document.querySelector(".steps__form");
-//   const stepNumbers = document.querySelectorAll(".step__number");
-//   const progress = document.querySelector(".progress__success");
-
-//   form.addEventListener("submit", (e) => e.preventDefault());
-
-//   let formSteps = 0;
-
-//   nextBtn.addEventListener("click", () => {
-//     if (formSteps === steps.length - 1) {
-//       formSteps = 0;
-//     } else {
-//       formSteps++;
-//     }
-
-//     updateFormSteps();
-//   });
-
-//   prevBtn.addEventListener("click", () => {
-//     if (formSteps === 0) {
-//       formSteps = steps.length - 1;
-//     } else {
-//       formSteps--;
-//     }
-
-//     updateFormSteps();
-//   });
-
-//   function updateFormSteps() {
-//     stepNumbers.forEach((stepNumber, index) => {
-//       if (index === formSteps) {
-//         stepNumber.classList.add("active__number");
-//       } else {
-//         stepNumber.classList.remove("active__number");
-//       }
-//     });
-
-//     const percent = ((formSteps + 1) / steps.length) * 87 + "%";
-//     progress.style.width = percent;
-
-//     steps.forEach((step, index) => {
-//       if (index === formSteps) {
-//         step.classList.add("active");
-//       } else {
-//         step.classList.remove("active");
-//       }
-//     });
-//   }
-
-//   updateFormSteps();
-// }
-
-// stepForm();
 window.addEventListener("DOMContentLoaded", () => {
   function stepForm() {
     const steps = document.querySelectorAll(".form__step");
@@ -200,6 +142,14 @@ function burgerMenu() {
       burger.classList.remove("active-burger");
       body.classList.remove("locked");
     }
+  });
+  const menuItem = document.querySelectorAll(".menu__item");
+  menuItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      menu.classList.remove("active");
+      burger.classList.remove("active-burger");
+      body.classList.remove("locked");
+    });
   });
   // Вот тут мы ставим брейкпоинт навбара
   window.addEventListener("resize", () => {

@@ -325,8 +325,8 @@ body.locked {
 }
 
 .hero {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
   text-align: center;
 }
 
@@ -475,8 +475,8 @@ body.locked {
 }
 
 .info {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
 }
 
 .info__card {
@@ -640,8 +640,8 @@ body.locked {
 }
 
 .about {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
 }
 
 .about__title {
@@ -803,8 +803,8 @@ body.locked {
 }
 
 .benefits {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
 }
 
 .benefits__inner {
@@ -914,8 +914,8 @@ body.locked {
 }
 
 .how {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
 }
 
 .how__title {
@@ -1434,8 +1434,8 @@ body.locked {
 }
 
 .faq {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.179rem + 2.857vw, 3.75rem);
 }
 
 .faq__title {
