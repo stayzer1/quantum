@@ -403,6 +403,10 @@ body.locked {
   font-weight: 800;
 }
 
+.de-page .hero-btn {
+  max-width: 365px;
+}
+
 .hero-btn {
   color: #fff;
   font-size: clamp(1.125rem, 0.986rem + 0.571vw, 1.5rem);
@@ -1714,6 +1718,7 @@ body.locked {
   }
 
   .tabs__header-items {
+    width: 100%;
     margin-right: auto;
   }
 }
@@ -2218,6 +2223,22 @@ body.locked {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .tabs__header-items {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .tabs__header-item {
+    margin: 0;
+  }
+
+  .tabs__header-item:last-child {
+    margin-right: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .tabs__header-item.active {
     padding: 8px 16px;
@@ -2395,6 +2416,10 @@ body.locked {
 }
 
 @media screen and (max-width: 400px) {
+  .tabs__header-items {
+    width: 400px;
+  }
+
   .about__row-card {
     height: 300px !important;
     overflow: hidden;
