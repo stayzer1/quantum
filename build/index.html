@@ -27,19 +27,25 @@
             </a>
           </div>
           <li class="menu__item menu__item-first">
-            <a href="#" class="menu__item-link" data-scroll>За компанията</a>
+            <a href="#about" class="menu__item-link" data-scroll
+              >За компанията</a
+            >
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link" data-scroll>Какво предлагаме</a>
+            <a href="#benefits" class="menu__item-link" data-scroll
+              >Какво предлагаме</a
+            >
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link" data-scroll>Как да започнем </a>
+            <a href="#how" class="menu__item-link" data-scroll
+              >Как да започнем
+            </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link" data-scroll>Тест </a>
+            <a href="#test" class="menu__item-link" data-scroll>Тест </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link" data-scroll>FAQ </a>
+            <a href="#faq" class="menu__item-link" data-scroll>FAQ </a>
           </li>
           <div class="lang-mobile">
             <a class="lang-mobile-bg">
@@ -67,7 +73,7 @@
               DE
             </a>
           </div>
-          <a class="navabar-btn navabar-btn-pc">Инвестирайте</a>
+          <a href="#test" class="navabar-btn navabar-btn-pc">Инвестирайте</a>
         </div>
       </div>
     </div>
@@ -89,10 +95,9 @@
           </h1>
           <h3 class="hero__subtitle">
             Започнете да печелите пасивно от <span>450 ЛВ.</span> без рискове и
-            още <br />
-            след няколко месеца да получите <span>10 000$.</span>
+            още след няколко месеца да получите <span>10 000$.</span>
           </h3>
-          <a class="hero-btn btn">Попълнете теста</a>
+          <a href="#test" class="hero-btn btn">Попълнете теста</a>
           <div class="hero__descr">
             Мощно, но просто. Инструмент за всеки. Високи приходи.
           </div>
@@ -188,7 +193,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="main-container">
           <h1 class="about__title">За компанията</h1>
           <div class="about__row">
@@ -262,7 +267,7 @@
           </div>
         </div>
       </section>
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <div class="main-container">
           <div class="benefits__inner">
             <div class="benefits__inner-left">
@@ -323,7 +328,7 @@
           </div>
         </div>
       </section>
-      <section class="how">
+      <section class="how" id="how">
         <div class="main-container">
           <h1 class="how__title">Как да започнем</h1>
           <div class="how__card">
@@ -380,7 +385,7 @@
           </div>
         </div>
       </section>
-      <section class="step-form">
+      <section class="step-form" id="test">
         <div class="main-container">
           <form class="steps__form">
             <div class="steps__numbers">
@@ -423,7 +428,6 @@
                           id="18-35"
                           class="form__step-selector"
                           value=""
-                          checked
                         />
                         <label for="18-35" id="18-35_text">От 18 до 35</label>
                       </form>
@@ -477,7 +481,6 @@
                         id="fam"
                         class="form__step-selector"
                         value=""
-                        checked
                       />
                       <label for="fam" id="fam_text"
                         >Препоръчано от приятели/роднини</label
@@ -532,7 +535,6 @@
                       id="trud"
                       class="form__step-selector"
                       value=""
-                      checked
                     />
                     <label for="trud" id="trud_text"
                       >Работя по трудов договор</label
@@ -582,7 +584,6 @@
                       id="min-500"
                       class="form__step-selector"
                       value=""
-                      checked
                     />
                     <label for="min-500" id="min-500_text">До 500 лв.</label>
                   </li>
@@ -639,7 +640,6 @@
                         id="min-3000"
                         class="form__step-selector"
                         value=""
-                        checked
                       />
                       <label for="min-3000" id="min-3000_text"
                         >До 3.000 лв.</label
@@ -697,7 +697,6 @@
                         id="rem"
                         class="form__step-selector"
                         value=""
-                        checked
                       />
                       <label for="rem" id="rem_text">Ремонт на дома</label>
                     </li>
@@ -755,7 +754,6 @@
                         id="yes"
                         class="form__step-selector"
                         value=""
-                        checked
                       />
                       <label for="yes" id="yes_text"
                         >Да, готов съм да направя първоначална вноска</label
@@ -796,22 +794,39 @@
                   работу.
                 </div>
                 <div class="form__step-wrapper4">
-                  <input type="name" placeholder="Име" />
-                  <input type="surname" placeholder="Фамилно" />
-                  <input type="email" placeholder="Имейл" />
-                  <input type="phone" placeholder="Телефонен номер" />
+                  <input type="name" required placeholder="Име" />
+                  <input type="surname" required placeholder="Фамилно" />
+                  <input
+                    type="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    required
+                    placeholder="Имейл"
+                  />
+                  <input
+                    required
+                    pattern="^[0-9-+\s()]*$"
+                    type="tel"
+                    maxlength="13"
+                    minlength="6"
+                    placeholder="Телефонен номер"
+                  />
+                  <button type="submit" class="form__step-end-btn btn">
+                    Изпрати
+                  </button>
                 </div>
-                <div class="form__step-end-btn btn">Изпрати</div>
               </div>
               <div class="step__buttons">
                 <button class="button prev__step">PREV</button>
-                <button class="button next__step">Следваща ></button>
+                <div class="step__buttons-disabled"></div>
+                <button type="button" class="button next__step">
+                  Следваща >
+                </button>
               </div>
             </div>
           </form>
         </div>
       </section>
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="main-container">
           <h1 class="faq__title">FAQ</h1>
           <div class="faq__questions">
@@ -1052,7 +1067,7 @@
         <a class="footer-info__item"> Условия за ползване </a>
         <a class="footer-info__item"> 2024. Всички права запазени </a>
       </div>
-      <a class="navabar-btn">Инвестирайте</a>
+      <a href="#test" class="navabar-btn">Инвестирайте</a>
     </div>
   </div>
 </footer>

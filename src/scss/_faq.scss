@@ -89,3 +89,8 @@
 .faq-arrow-active {
   display: none;
 }
+@media screen and (max-width: 500px) {
+  .accordion .accordion__item .accordion__item-trigger {
+    padding: 16px 14px;
+  }
+}

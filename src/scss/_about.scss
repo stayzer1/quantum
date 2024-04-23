@@ -165,6 +165,15 @@
   .about__row-second-card {
     margin: 0 auto;
   }
+  .about__row-second-card-title {
+    text-align: center;
+  }
+  .about__row-second-card-subtitle {
+    text-align: center;
+  }
+  .about__row-second-card-descr {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 768px) {
   .about__row-card {

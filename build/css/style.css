@@ -1247,10 +1247,20 @@ body.locked {
 }
 
 .step__buttons {
+  position: relative;
   margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.step__buttons .step__buttons-disabled {
+  position: absolute;
+  width: 180px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 32px 32px 32px 32px;
+  z-index: 2;
 }
 
 .step__buttons .prev__step {
@@ -1264,6 +1274,7 @@ body.locked {
   padding: 8px 40px;
   color: #fff;
   overflow: hidden;
+  z-index: 1;
   position: relative;
   max-width: 180px;
   -webkit-box-shadow: 0 4px 12px 4px rgba(131, 58, 251, 0.25);
@@ -1308,7 +1319,7 @@ body.locked {
 
 .form__step-title {
   color: #000;
-  font-size: clamp(1.5rem, 1.407rem + 0.381vw, 1.75rem);
+  font-size: clamp(1.375rem, 1.236rem + 0.571vw, 1.75rem);
   font-weight: 700;
   line-height: clamp(1.813rem, 1.696rem + 0.476vw, 2.125rem);
   padding-bottom: 24px;
@@ -1419,6 +1430,7 @@ body.locked {
 
 .form__step-end-btn {
   margin-top: 20px;
+  max-width: 180px;
 }
 
 .faq {
@@ -1678,6 +1690,18 @@ body.locked {
 
   .about__row-second-card {
     margin: 0 auto;
+  }
+
+  .about__row-second-card-title {
+    text-align: center;
+  }
+
+  .about__row-second-card-subtitle {
+    text-align: center;
+  }
+
+  .about__row-second-card-descr {
+    text-align: center;
   }
 
   .benefits__cards {
@@ -2197,12 +2221,22 @@ body.locked {
 }
 
 @media screen and (max-width: 550px) {
+  .step__number-last {
+    left: -7%;
+  }
+
   .footer-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .step__number-last {
+    left: -15%;
   }
 }
 
@@ -2238,11 +2272,19 @@ body.locked {
   .how__card {
     padding: 15px 15px;
   }
+
+  .accordion .accordion__item .accordion__item-trigger {
+    padding: 16px 14px;
+  }
 }
 
 @media screen and (max-width: 490px) {
   .step__number {
     max-width: 49px !important;
+  }
+
+  .step__number-last {
+    max-width: 100px !important;
   }
 
   .steps {
@@ -2254,6 +2296,28 @@ body.locked {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .step__number-last {
+    left: -26%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .step__number-last {
+    left: -34%;
+  }
+
+  .step-form__text-title br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .step__number-last {
+    left: -42%;
   }
 }
 
@@ -2290,7 +2354,7 @@ body.locked {
     max-height: 370px !important;
   }
 
-  .step__number-last {
+  .steps__numbers .step__number-last {
     max-width: 90px !important;
     position: relative;
     left: -5%;

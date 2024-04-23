@@ -109,6 +109,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const steps = document.querySelectorAll(".form__step");
     const prevBtn = document.querySelector(".prev__step");
     const nextBtn = document.querySelector(".next__step");
+    // const stepButtonsDisabled = document.querySelector(
+    //   ".step__buttons-disabled"
+    // );
+    const stepButtonsDisabled = document.querySelector(
+      ".step__buttons-disabled"
+    );
     const form = document.querySelector(".steps__form");
     const stepNumbers = document.querySelectorAll(".step__number");
     const progress = document.querySelector(".progress__success");
@@ -116,10 +122,13 @@ window.addEventListener("DOMContentLoaded", () => {
     let formSteps = 0;
     nextBtn.addEventListener("click", () => {
       formSteps++;
+      stepButtonsDisabled.style.display = "block";
       if (formSteps >= steps.length - 1) {
         nextBtn.style.display = "none";
+        stepButtonsDisabled.style.display = "none";
         formSteps = steps.length - 1;
       }
+
       updateFormSteps();
     });
     prevBtn.addEventListener("click", () => {
@@ -137,17 +146,21 @@ window.addEventListener("DOMContentLoaded", () => {
       steps.forEach((step, index) => {
         step.classList.toggle("active", index === formSteps);
       });
-      const currentStepInputs = document.querySelectorAll(
-        ".form__step-selector"
-      );
-      let anyInputSelected = Array.from(currentStepInputs).some(
-        (input) => input.checked
-      );
-      if (anyInputSelected) {
-        nextBtn.disabled = false;
-      } else {
-        nextBtn.disabled = true;
-      }
+
+      form.addEventListener("change", () => {
+        let anyInputSelected = false;
+        steps.forEach((step) => {
+          const stepSelectors = step.querySelectorAll(".form__step-selector");
+          if (Array.from(stepSelectors).some((input) => input.checked)) {
+            anyInputSelected = true;
+          }
+        });
+        if (anyInputSelected) {
+          stepButtonsDisabled.style.display = "none";
+        } else {
+          stepButtonsDisabled.style.display = "block";
+        }
+      });
     }
     updateFormSteps();
   }
@@ -199,4 +212,17 @@ function burgerMenu() {
   });
 }
 burgerMenu();
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
 
