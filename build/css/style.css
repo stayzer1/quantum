@@ -516,6 +516,10 @@ body.locked {
   line-height: clamp(0.625rem, 0.532rem + 0.381vw, 0.875rem);
 }
 
+.de-page .tabs__header-items {
+  max-width: 760px;
+}
+
 .info-img-abs {
   position: absolute;
   width: 1000px;

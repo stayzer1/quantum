@@ -67,7 +67,11 @@
 }
 .tabs__header-profile-arrow {
 }
-
+.de-page {
+  .tabs__header-items {
+    max-width: 760px;
+  }
+}
 .info-img-abs {
   position: absolute;
   width: 1000px;
