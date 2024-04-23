@@ -1,4 +1,47 @@
-// Footer
-footer {
-    display: block;
+.main-container {
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  span {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+.footer-info {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.footer-info__item {
+  color: #000;
+  font-size: 16px;
+
+  font-weight: 500;
+}
+.navabar-btn {
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer-info {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

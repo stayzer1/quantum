@@ -1,61 +1,85 @@
 // Container
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
 
-    @media (max-width: $breakpoint1450) {
-        max-width: 1200px;
-    }
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
 
-    @media (max-width: $breakpoint992) {
-        max-width: 970px;
-    }
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
 
-    @media (max-width: $breakpoint768) {
-        max-width: 740px;
-    }
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
 
-    @media (max-width: $breakpoint480) {
-        max-width: none;
-    }
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
 }
-
+main {
+  overflow: hidden;
+}
+.main-container {
+  padding-right: 60px;
+  padding-left: 60px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .main-container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 // Body Locked
 body {
-    * {
-        font-family: 'SofiaSans', sans-serif;
-    }
-    &.locked {
-        overflow: hidden;
-    }
+  * {
+    font-family: "SofiaSans", sans-serif;
+  }
+  &.locked {
+    overflow: hidden;
+  }
 }
 
 // Animations
 // Fade
 @keyframes fade {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .btn {
-    width: 100%;
-    display: flex;
-    padding: 16px 40px;
-    overflow: hidden;
-    color: #fff;
-    position: relative;
-    max-width: 300px;
-    box-shadow: 0 4px 12px 4px rgba(131,58,251,.25);
-    box-sizing: border-box;
-    align-items: center;
-    border-radius: 32px 32px 32px 32px;
-    justify-content: center;
-    background-color: #833afb;
+  width: 100%;
+  display: flex;
+  padding: 16px 40px;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  max-width: 300px;
+  box-shadow: 0 4px 12px 4px rgba(131, 58, 251, 0.25);
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 32px 32px 32px 32px;
+  justify-content: center;
+  background-color: #833afb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translate(-3px, -3px);
 }
