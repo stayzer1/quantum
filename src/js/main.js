@@ -1,49 +1,49 @@
 // Custom scripts
-function tabs(
-  headerSelector,
-  tabSelector,
-  contentSelector,
-  activeClass,
-  display = "flex"
-) {
-  const header = document.querySelector(headerSelector),
-    tab = document.querySelectorAll(tabSelector),
-    content = document.querySelectorAll(contentSelector);
-  function hideTabContent() {
-    content.forEach((item) => {
-      item.style.display = "none";
-    });
-    tab.forEach((item) => {
-      item.classList.remove(activeClass);
-    });
-  }
-  function showTabContent(i = 0) {
-    content[i].style.display = display;
-    tab[i].classList.add(activeClass);
-  }
-  hideTabContent();
-  showTabContent();
-  header.addEventListener("click", (e) => {
-    const target = e.target;
-    if (
-      target.classList.contains(tabSelector.replace(/\./, "")) ||
-      target.parentNode.classList.contains(tabSelector.replace(/\./, ""))
-    ) {
-      tab.forEach((item, i) => {
-        if (target == item || target.parentNode == item) {
-          hideTabContent();
-          showTabContent(i);
-        }
-      });
-    }
-  });
-}
+// function tabs(
+//   headerSelector,
+//   tabSelector,
+//   contentSelector,
+//   activeClass,
+//   display = "flex"
+// ) {
+//   const header = document.querySelector(headerSelector),
+//     tab = document.querySelectorAll(tabSelector),
+//     content = document.querySelectorAll(contentSelector);
+//   function hideTabContent() {
+//     content.forEach((item) => {
+//       item.style.display = "none";
+//     });
+//     tab.forEach((item) => {
+//       item.classList.remove(activeClass);
+//     });
+//   }
+//   function showTabContent(i = 0) {
+//     content[i].style.display = display;
+//     tab[i].classList.add(activeClass);
+//   }
+//   hideTabContent();
+//   showTabContent();
+//   header.addEventListener("click", (e) => {
+//     const target = e.target;
+//     if (
+//       target.classList.contains(tabSelector.replace(/\./, "")) ||
+//       target.parentNode.classList.contains(tabSelector.replace(/\./, ""))
+//     ) {
+//       tab.forEach((item, i) => {
+//         if (target == item || target.parentNode == item) {
+//           hideTabContent();
+//           showTabContent(i);
+//         }
+//       });
+//     }
+//   });
+// }
 
 // ПЕРВЫЙ аргумент - класс всего нашего хедера табов.
 // ВТОРОЙ аргумент - класс конкретного элемента, при клике на который будет переключатся таб.
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
-tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");
+// tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");
 
 window.addEventListener("DOMContentLoaded", () => {
   function stepForm() {
@@ -61,11 +61,14 @@ window.addEventListener("DOMContentLoaded", () => {
     const progress = document.querySelector(".progress__success");
     form.addEventListener("submit", (e) => e.preventDefault());
     let formSteps = 0;
+    nextBtn.classList.add("step__button-opacity");
     nextBtn.addEventListener("click", () => {
       formSteps++;
+      nextBtn.classList.add("step__button-opacity");
       stepButtonsDisabled.style.display = "block";
       if (formSteps >= steps.length - 1) {
         nextBtn.style.display = "none";
+        nextBtn.classList.remove("step__button-opacity");
         stepButtonsDisabled.style.display = "none";
         formSteps = steps.length - 1;
       }
@@ -98,6 +101,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
         if (anyInputSelected) {
           stepButtonsDisabled.style.display = "none";
+          nextBtn.classList.remove("step__button-opacity");
         } else {
           stepButtonsDisabled.style.display = "block";
         }

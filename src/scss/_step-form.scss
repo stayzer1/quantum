@@ -108,7 +108,9 @@
     }
   }
 }
-
+.step__button-opacity {
+  opacity: 0.25;
+}
 // Кнопки навигации формы
 // .step__buttons
 .step__buttons {
@@ -124,7 +126,8 @@
     position: absolute;
     width: 180px;
     height: 32px;
-    background-color: rgba(0, 0, 0, 0.25);
+    // background-color: rgba(0, 0, 0);
+    // opacity: 0.1;
     border-radius: 32px 32px 32px 32px;
     z-index: 2;
   }

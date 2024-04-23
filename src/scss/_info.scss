@@ -1,16 +1,6 @@
 .tabs {
   width: 100%;
   &__header {
-    display: flex;
-    padding: 4px;
-    align-items: center;
-    width: 100%;
-    max-width: 730px;
-    border-radius: 24px;
-    background-color: #fff;
-    @media (max-width: 768px) {
-      flex-wrap: wrap;
-    }
     &-item {
       margin: 0 25px;
       cursor: pointer;
@@ -31,6 +21,53 @@
     z-index: 10;
   }
 }
+.tabs__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs__header-items {
+  display: flex;
+  align-items: center;
+  display: flex;
+  padding: 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 730px;
+  border-radius: 24px;
+  background-color: #fff;
+}
+.tabs__header-profile {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  max-width: 240px;
+  border-radius: 24px 24px 24px 24px;
+  background-color: #fff;
+}
+.tabs__header-profile-img {
+}
+.tabs__header-profile-text {
+  margin-left: 10px;
+  margin-right: 45px;
+}
+.tabs__header-profile-text-name {
+  color: #000;
+  font-size: clamp(0.75rem, 0.657rem + 0.381vw, 1rem);
+  font-weight: 800;
+  line-height: clamp(0.875rem, 0.759rem + 0.476vw, 1.188rem);
+}
+.tabs__header-profile-text-descr {
+  color: #000;
+  font-size: clamp(0.5rem, 0.407rem + 0.381vw, 0.75rem);
+  font-weight: 500;
+  line-height: clamp(0.625rem, 0.532rem + 0.381vw, 0.875rem);
+}
+.tabs__header-profile-arrow {
+}
+
 .info-img-abs {
   position: absolute;
   width: 1000px;
@@ -249,6 +286,9 @@
     top: 80%;
     left: -7%;
   }
+  .tabs__header {
+    justify-content: space-between;
+  }
   // .info__content__graphic {
   //   width: 100%;
   //   max-width: 100%;
@@ -261,6 +301,18 @@
   //   justify-content: center;
   //   align-items: center;
   // }
+}
+@media screen and (max-width: 1150px) {
+  .tabs__header {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .tabs__header-profile {
+    margin-right: auto;
+  }
+  .tabs__header-items {
+    margin-right: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .tabs__header {
