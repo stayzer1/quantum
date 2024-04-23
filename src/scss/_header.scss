@@ -58,6 +58,7 @@
 }
 .lang-dropdown {
   display: none;
+  color: #000;
   position: absolute;
   z-index: 1;
   border-radius: 4px 4px 4px 4px;
@@ -139,6 +140,14 @@
     font-family: "Sofia Sans", sans-serif;
     font-weight: 500;
   }
+  .header-de {
+    .lang-mobile-bg {
+      background-color: transparent;
+    }
+    .lang-mobile-de {
+      background-color: #f4f4f6;
+    }
+  }
   .lang-mobile-de {
     gap: 10px;
     width: 140px;
@@ -153,8 +162,6 @@
     justify-content: center;
     color: #000;
     font-size: 16px;
-    font-style: normal;
-    font-family: "Sofia Sans", sans-serif;
     font-weight: 500;
   }
 

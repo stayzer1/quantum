@@ -273,6 +273,7 @@ body.locked {
 
 .lang-dropdown {
   display: none;
+  color: #000;
   position: absolute;
   z-index: 1;
   border-radius: 4px 4px 4px 4px;
@@ -1901,6 +1902,14 @@ body.locked {
     font-weight: 500;
   }
 
+  .header-de .lang-mobile-bg {
+    background-color: transparent;
+  }
+
+  .header-de .lang-mobile-de {
+    background-color: #f4f4f6;
+  }
+
   .lang-mobile-de {
     gap: 10px;
     width: 140px;
@@ -1922,8 +1931,6 @@ body.locked {
             justify-content: center;
     color: #000;
     font-size: 16px;
-    font-style: normal;
-    font-family: "Sofia Sans", sans-serif;
     font-weight: 500;
   }
 
